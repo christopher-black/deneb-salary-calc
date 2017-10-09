@@ -6,4 +6,5 @@ function readyNow() {
 
 function submitClicked() {
   console.log($('#salary').val());
+  $('#output').append('<p>$' + $('#salary').val() + '</p>');
 }
