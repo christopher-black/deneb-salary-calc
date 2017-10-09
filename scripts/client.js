@@ -1,13 +1,16 @@
 $(document).ready(readyNow);
 
 function readyNow() {
-  $('#submitBtn').on('click', submitClicked);
+  $('#employeeForm').on('submit', submitClicked);
   $('#output').on('click', '.deleteBtn', deleteRow);
 }
 
 var averageSalary = 0;
 
-function submitClicked() {
+// somewher in jQuery... submitClicked(someObject);
+function submitClicked(evt) {
+  console.log(evt);
+  evt.preventDefault();
   console.log($('#salary').val());
   averageSalary += parseInt($('#salary').val());
 
