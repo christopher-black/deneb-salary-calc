@@ -2,6 +2,7 @@ $(document).ready(readyNow);
 
 function readyNow() {
   $('#submitBtn').on('click', submitClicked);
+  $('#output').on('click', '.deleteBtn', deleteRow);
 }
 
 var averageSalary = 0;
@@ -17,10 +18,25 @@ function submitClicked() {
   $tr.append('<td>' + $('#empId').val() + '</td>');
   $tr.append('<td>' + $('#jobTitle').val() + '</td>');
   $tr.append('<td>' + $('#salary').val() + '</td>');
+  $tr.append('<td><button class="deleteBtn">Delete</button></td>');
   $('#output').append($tr);
 
   $('input').val('');
 
+  $('#avgMonthlySalary').text('$' + calculateAverageSalary());
+}
+
+function deleteRow() {
+  // button -> td -> previous td -> text
+  var salaryOfEmployee = parseInt($(this).parent().prev().text());
+  // Subtract from total
+  averageSalary -= salaryOfEmployee;
+  // $(this) will be the button that was clicked on
+  $(this).closest('tr').remove();
+  // Could also be written as...
+  // $(this).parent().parent().remove();
+
+  // Update the dom
   $('#avgMonthlySalary').text('$' + calculateAverageSalary());
 }
 

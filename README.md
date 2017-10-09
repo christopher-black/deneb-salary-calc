@@ -11,5 +11,5 @@ Web app that allows users to input employee data. Calculated monthly cost for em
 - [x] Add remaining input fields
 - [x] Create an HTML table and append rows to that table
 - [ ] Convert to an HTML form
-- [ ] Delete rows
+- [x] Delete rows
 - [ ] Styling & CSS (bring in some styles from w3schools)
