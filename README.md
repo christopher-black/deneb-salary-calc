@@ -8,8 +8,8 @@ Web app that allows users to input employee data. Calculated monthly cost for em
 - [x] Add a single input and log to the console
 - [x] Append to the dom
 - [x] Calculate monthly average and append to the dom
-- [ ] Add remaining input fields
-- [ ] Create an HTML table and append rows to that table
+- [x] Add remaining input fields
+- [x] Create an HTML table and append rows to that table
 - [ ] Convert to an HTML form
 - [ ] Delete rows
 - [ ] Styling & CSS (bring in some styles from w3schools)
